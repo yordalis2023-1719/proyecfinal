@@ -1,16 +1,7 @@
-const express = require("express");
-const app = express();
+const app = require('./app');
+
 const PORT = process.env.PORT || 3000;
 
-app.get("/", (req, res) => {
-  res.send("Hola Mundo CI/CD 🚀");
+app.listen(PORT, () => {
+  console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
-
-if (require.main === module) {
-  app.listen(PORT, () => {
-    console.log(`Servidor corriendo en http://localhost:${PORT}`);
-  });
-}
-
-module.exports = app;
-

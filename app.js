@@ -1,8 +1,8 @@
-const express = require("express");
+const express = require('express');
 const app = express();
 
-app.get("/", (_req, res) => {
-  res.send("Hola Mundo desde CI/CD con GitHub 🚀");
+app.get('/', (req, res) => {
+  res.send('Hola Mundo');
 });
 
 module.exports = app;
